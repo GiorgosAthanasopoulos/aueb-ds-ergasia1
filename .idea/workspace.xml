@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ergasia1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CircularSinglyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StringQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StringQueueImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StringStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StringStackImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
+    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="2022-11-07">
+      <change afterPath="$PROJECT_DIR$/thiseas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,9 +46,26 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "/home/george/Documents/aueb/data-structures/aueb-ds-ergasia1",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Thiseas" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Thiseas" />
+      <module name="ergasia1" />
+      <option name="PROGRAM_PARAMETERS" value="thiseas.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,6 +77,9 @@
       <workItem from="1667659070702" duration="184000" />
       <workItem from="1667659264559" duration="10000" />
       <workItem from="1667659284176" duration="18777000" />
+      <workItem from="1667752632110" duration="2226000" />
+      <workItem from="1667756646197" duration="1437000" />
+      <workItem from="1667828345796" duration="14211000" />
     </task>
     <servers />
   </component>
@@ -93,5 +99,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="2022-11-07" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022-11-07" />
   </component>
 </project>
