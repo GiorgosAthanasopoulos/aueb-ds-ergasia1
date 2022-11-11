@@ -1,106 +1,74 @@
 import java.util.NoSuchElementException;
 
-public class SinglyLinkedList<T> implements LinkedList<T> {
+public class SinglyLinkedList<T> {
     private int size = 0;
 
     private Node<T> head;
     private Node<T> tail;
 
-    public int size() {
-        return size;
-    }
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    public void addFirst(T val) {
+    public void push(T val) {
         Node<T> node = new Node<>(val);
-
-        if(size == 0) {
-            head = tail = node;
-        } else {
-            tail.next = node;
-            node.next = head;
-            head = node;
-        }
-
-        size++;
-    }
-    public void addLast(T val) {
-        Node<T> node = new Node<>(val);
-
-        if (size == 0) {
-            head = tail = node;
-        } else {
-            node.next = tail.next;
-            tail.next = node;
-            tail = node;
-        }
-
+        node.next = head;
+        head = node;
+        if (size == 0) tail = node;
         size++;
     }
 
-    public Node<T> removeFirst() throws NoSuchElementException {
-        if(size == 0) {
-            throw new NoSuchElementException();
-        } else if(size == 1) {
-            Node<T> oldHead = head;
-            head = tail = null;
-            size--;
-            return oldHead;
-        } else {
-            Node<T> oldHead = head;
-            head = head.next;
-            tail.next = head;
-            size--;
-            return oldHead;
-        }
-    }
-    public Node<T> removeLast() throws NoSuchElementException {
-        if(size == 0) {
-            throw new NoSuchElementException();
-        } else if(size == 1) {
-            Node<T> oldHead = head;
-            head = tail = null;
-            size--;
-            return oldHead;
-        } else {
-            Node<T> oldTail = tail;
-            // TODO update tail.prev, tail
-            size--;
-            return oldTail;
-        }
+    public Node<T> pop() throws NoSuchElementException {
+        if (size == 0) throw new NoSuchElementException();
+
+        Node<T> oldHead = head;
+        head = head.next;
+        if (--size == 0) tail = null;
+        return oldHead;
     }
 
-    public Node<T> getFirst() throws NoSuchElementException {
-        if(size == 0) {
-            throw new NoSuchElementException();
-        }
+    public void add(T val) {
+        Node<T> node = new Node<>(val);
+
+        if (size == 0) head = node;
+        else tail.next = node;
+        tail = node;
+        size++;
+    }
+
+    public Node<T> remove() throws NoSuchElementException {
+        if (size == 0) throw new NoSuchElementException();
+
+        Node<T> oldHead = head;
+        head = head.next;
+        if (--size == 0) tail = null;
+        return oldHead;
+    }
+
+    public Node<T> stackPeek() throws NoSuchElementException {
+        if (size == 0) throw new NoSuchElementException();
 
         return head;
     }
-    public Node<T> getLast() throws NoSuchElementException {
-        if(size == 0) {
-            throw new NoSuchElementException();
-        }
+
+    public Node<T> queuePeek() throws NoSuchElementException {
+        if (size == 0) throw new NoSuchElementException();
 
         return tail;
     }
 
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
     @Override
     public String toString() {
-        StringBuilder buffer = new StringBuilder();
-
-        buffer.append(getClass().getName());
-        buffer.append("@");
-        buffer.append(Integer.toHexString(hashCode()));
-        buffer.append(" : ");
+        StringBuilder buffer = new StringBuilder(getClass().getName() + "@" + Integer.toHexString(hashCode()) + " : ");
 
         Node<T> headCopy = head;
 
-        while(headCopy != null) {
-            buffer.append(head.val);
-            buffer.append(" ");
+        while (headCopy != null) {
+            buffer.append(headCopy.val).append(", ");
 
             headCopy = headCopy.next;
         }

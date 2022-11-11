@@ -7,6 +7,7 @@ public class StringQueueImpl<T> implements StringQueue<T> {
     public StringQueueImpl() {
         singlyLinkedList = new SinglyLinkedList<>();
     }
+
     @Override
     public boolean isEmpty() {
         return singlyLinkedList.isEmpty();
@@ -14,17 +15,17 @@ public class StringQueueImpl<T> implements StringQueue<T> {
 
     @Override
     public void put(T item) {
-        singlyLinkedList.addFirst(item);
+        singlyLinkedList.add(item);
     }
 
     @Override
     public T get() throws NoSuchElementException {
-        return singlyLinkedList.removeLast().val;
+        return singlyLinkedList.remove().val;
     }
 
     @Override
     public T peek() throws NoSuchElementException {
-        return singlyLinkedList.getLast().val;
+        return singlyLinkedList.queuePeek().val;
     }
 
     @Override

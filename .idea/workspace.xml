@@ -7,6 +7,17 @@
     <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="merge">
       <changelist_data name="giorgosathanasopoulos" email="spzdoom@gmail.com" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CircularSinglyLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QueueWithOnePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringQueueImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringStackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStackImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiseas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thiseas.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +63,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/george/Documents/aueb/data-structures/aueb-ds-ergasia1&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -86,6 +97,9 @@
       <workItem from="1667828345796" duration="14368000" />
       <workItem from="1667847184015" duration="77000" />
       <workItem from="1667930016497" duration="592000" />
+      <workItem from="1668033775072" duration="1564000" />
+      <workItem from="1668035368910" duration="740000" />
+      <workItem from="1668168988018" duration="9424000" />
     </task>
     <servers />
   </component>
@@ -108,5 +122,9 @@
     <MESSAGE value="2022-11-07" />
     <MESSAGE value="merge" />
     <option name="LAST_COMMIT_MESSAGE" value="merge" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
