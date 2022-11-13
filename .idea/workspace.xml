@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="merge">
-      <changelist_data name="giorgosathanasopoulos" email="spzdoom@gmail.com" />
+    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="meros a &amp; c done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CircularSinglyLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/QueueWithOnePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StringQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringQueueImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StringStackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStackImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiseas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thiseas.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +92,18 @@
       <workItem from="1667930016497" duration="592000" />
       <workItem from="1668033775072" duration="1564000" />
       <workItem from="1668035368910" duration="740000" />
-      <workItem from="1668168988018" duration="9424000" />
+      <workItem from="1668168988018" duration="9828000" />
+      <workItem from="1668205596282" duration="3123000" />
+      <workItem from="1668351403319" duration="2735000" />
     </task>
+    <task id="LOCAL-00001" summary="meros a &amp; c done">
+      <created>1668178511026</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668178511026</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +124,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2022-11-07" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="meros a &amp; c done" />
+    <option name="LAST_COMMIT_MESSAGE" value="meros a &amp; c done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

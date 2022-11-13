@@ -41,7 +41,7 @@ public class QueueWithOnePointer<T> implements StringQueue<T> {
 
         @Override
         public String toString() {
-            StringBuilder buffer = new StringBuilder(getClass().getName() + "@" + Integer.toHexString(hashCode()) + " : ");
+            StringBuilder buffer = new StringBuilder();
             Node<T> head = tail.next;
 
             while (head != tail) {

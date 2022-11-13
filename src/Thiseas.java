@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.*;
 
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.Predicate;
 
 public class Thiseas {
     static class ThiseasData {
@@ -112,7 +113,9 @@ public class Thiseas {
     }
 
     static class Point {
+        // labyrinth row
         int x;
+        // labyrinth col
         int y;
 
         public Point(int x, int y) {
@@ -127,13 +130,29 @@ public class Thiseas {
 
     }
 
+    static ArrayList<Point> findNeighbours(ThiseasData thiseasData, Point point) {
+        ArrayList<Point> res = new ArrayList<>();
+
+        for (int i = point.x - 1; i <= point.x + 1; i++)
+            for (int j = point.y - 1; j <= point.y + 1; j++)
+                if (i >= 0 && j >= 0 && !(i == point.x && j == point.y) && (thiseasData.labyrinth.get(i)[j].equals("0")) && !(i + j == point.x + point.y))
+                    res.add(new Point(i, j));
+
+        return res;
+    }
+
     static Optional<Point> findSolution(ThiseasData thiseasData) {
         StringStack<StringStack<Point>> stack = new StringStackImpl<>();
 
-        StringStack<Point> e = new StringStackImpl<>();
-        e.push(new Point(thiseasData.erow, thiseasData.ecol));
+        StringStackImpl<Point> eNeighbours = new StringStackImpl<>();
+        findNeighbours(thiseasData, new Point(thiseasData.erow, thiseasData.ecol)).forEach(eNeighbours::push);
+        stack.push(eNeighbours);
 
-        stack.push(e);
+        Predicate<Point> isPointSolution = (Point point) -> (point.x == 0 || point.x == thiseasData.rows || point.y == 0 || point.y == thiseasData.cols) && thiseasData.labyrinth.get(point.x)[point.y].equals("O");
+
+        while (!stack.isEmpty()) {
+
+        }
 
         return Optional.empty();
     }

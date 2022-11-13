@@ -63,12 +63,15 @@ public class SinglyLinkedList<T> {
 
     @Override
     public String toString() {
-        StringBuilder buffer = new StringBuilder(getClass().getName() + "@" + Integer.toHexString(hashCode()) + " : ");
+        StringBuilder buffer = new StringBuilder();
 
         Node<T> headCopy = head;
 
         while (headCopy != null) {
-            buffer.append(headCopy.val).append(", ");
+            buffer.append(headCopy.val);
+            if (headCopy.next != null) {
+                buffer.append(", ");
+            }
 
             headCopy = headCopy.next;
         }

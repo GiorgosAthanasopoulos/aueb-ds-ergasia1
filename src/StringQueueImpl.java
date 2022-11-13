@@ -37,4 +37,9 @@ public class StringQueueImpl<T> implements StringQueue<T> {
     public int size() {
         return singlyLinkedList.size();
     }
+
+    @Override
+    public String toString() {
+        return singlyLinkedList.toString();
+    }
 }

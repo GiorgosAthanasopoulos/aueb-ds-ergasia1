@@ -37,4 +37,9 @@ public class StringStackImpl<T> implements StringStack<T> {
     public int size() {
         return singlyLinkedList.size();
     }
+
+    @Override
+    public String toString() {
+        return singlyLinkedList.toString();
+    }
 }
