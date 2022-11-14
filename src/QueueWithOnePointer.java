@@ -1,6 +1,7 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
+@SuppressWarnings("unused")
 public class QueueWithOnePointer<T> implements StringQueue<T> {
 
     static class CircularSinglyLinkedList<T> {

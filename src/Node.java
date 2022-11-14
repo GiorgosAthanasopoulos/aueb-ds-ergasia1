@@ -6,9 +6,4 @@ class Node<T> {
     public Node(T v) {
         val = v;
     }
-
-    public Node(T v, Node<T> n) {
-        val = v;
-        next = n;
-    }
 }

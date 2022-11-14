@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import java.nio.file.Paths;
 import java.util.*;
 
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.function.Predicate;
 
 public class Thiseas {
     static class ThiseasData {
@@ -24,6 +24,21 @@ public class Thiseas {
      */
     static Optional<ThiseasData> validLabyrinthFile(String filename) throws IOException {
         File file = new File(filename);
+
+        // check if filepath is valid
+        // example: c:\u:sers is invalid
+        try {
+            Paths.get(filename);
+        } catch (Exception __) {
+            System.out.println("Input path is not valid!");
+            return Optional.empty();
+        }
+
+        // check if filepath points to a file and not a folder!
+        if (file.isDirectory()) {
+            System.out.println("Input path must be a file!");
+            return Optional.empty();
+        }
 
         // check that the file given exists
         if (!file.exists()) {
@@ -141,6 +156,10 @@ public class Thiseas {
         return res;
     }
 
+    static boolean isPointSolution(ThiseasData thiseasData, Point point) {
+        return (point.x == 0 || point.y == thiseasData.rows - 1 || point.y == 0 || point.y == thiseasData.cols - 1) && thiseasData.labyrinth.get(point.x)[point.y].equals("O");
+    }
+
     static Optional<Point> findSolution(ThiseasData thiseasData) {
         StringStack<StringStack<Point>> stack = new StringStackImpl<>();
 
@@ -148,10 +167,27 @@ public class Thiseas {
         findNeighbours(thiseasData, new Point(thiseasData.erow, thiseasData.ecol)).forEach(eNeighbours::push);
         stack.push(eNeighbours);
 
-        Predicate<Point> isPointSolution = (Point point) -> (point.x == 0 || point.x == thiseasData.rows || point.y == 0 || point.y == thiseasData.cols) && thiseasData.labyrinth.get(point.x)[point.y].equals("O");
-
+        firstWhile:
         while (!stack.isEmpty()) {
+            StringStack<Point> currentStack = stack.peek();
 
+            while (!currentStack.isEmpty()) {
+                Point currentPoint = currentStack.peek();
+
+                if (isPointSolution(thiseasData, currentPoint)) {
+                    return Optional.of(currentPoint);
+                }
+
+                // push neighbours of currentPoint to stack
+                StringStack<Point> newStack = new StringStackImpl<>();
+                findNeighbours(thiseasData, currentPoint).forEach(newStack::push);
+                stack.push(newStack);
+                continue firstWhile;
+
+                // currentStack.pop();
+            }
+
+            stack.pop();
         }
 
         return Optional.empty();
