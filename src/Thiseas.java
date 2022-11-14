@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.regex.Pattern;
 
 public class Thiseas {
     static class ThiseasData {
@@ -26,7 +27,7 @@ public class Thiseas {
         File file = new File(filename);
 
         // check if filepath is valid
-        // example: c:\u:sers is invalid
+        // example: c:\\u:sers is invalid
         try {
             Paths.get(filename);
         } catch (Exception __) {
@@ -67,6 +68,9 @@ public class Thiseas {
         int infoLineCounter = 0;
         Scanner sc = new Scanner(file);
 
+        Pattern infoLineRegex = Pattern.compile("^[0-9]*$");
+        Pattern labyrinthLineRegex = Pattern.compile("^[0-1E]*$");
+
         while (sc.hasNextLine()) {
             String[] lineInput = sc.nextLine().trim().strip().split(" ");
 
@@ -79,6 +83,21 @@ public class Thiseas {
             // if length is 2 then we have 2 numbers which means we are in info line
             // even if the labyrinth grid is 2x2 this still holds value
             if (lineInput.length == 2) infoLineCounter++;
+
+            // check for invalid characters
+            for (String s : lineInput) {
+                if (lineCounter < 2) {
+                    if (!infoLineRegex.matcher(s).find()) {
+                        System.out.println("Input file format is invalid: info line " + (lineCounter + 1) + " contains invalid literal: " + s);
+                        return Optional.empty();
+                    }
+                } else {
+                    if (!labyrinthLineRegex.matcher(s).find()) {
+                        System.out.println("Input file format is invalid: labyrinth line " + (lineCounter + 1 - 2) + " contains invalid literal: " + s);
+                        return Optional.empty();
+                    }
+                }
+            }
 
             switch (lineCounter) {
                 case 0 -> {
@@ -145,15 +164,12 @@ public class Thiseas {
 
     }
 
-    static ArrayList<Point> findNeighbours(ThiseasData thiseasData, Point point) {
-        ArrayList<Point> res = new ArrayList<>();
-
+    static Optional<Point> findNeighbour(ThiseasData thiseasData, Point point) {
         for (int i = point.x - 1; i <= point.x + 1; i++)
             for (int j = point.y - 1; j <= point.y + 1; j++)
                 if (i >= 0 && j >= 0 && !(i == point.x && j == point.y) && (thiseasData.labyrinth.get(i)[j].equals("0")) && !(i + j == point.x + point.y))
-                    res.add(new Point(i, j));
-
-        return res;
+                    return Optional.of(new Point(i, j));
+        return Optional.empty();
     }
 
     static boolean isPointSolution(ThiseasData thiseasData, Point point) {
@@ -161,32 +177,23 @@ public class Thiseas {
     }
 
     static Optional<Point> findSolution(ThiseasData thiseasData) {
-        StringStack<StringStack<Point>> stack = new StringStackImpl<>();
+        StringStack<Point> stack = new StringStackImpl<>();
+        stack.push(new Point(thiseasData.erow, thiseasData.ecol));
 
-        StringStackImpl<Point> eNeighbours = new StringStackImpl<>();
-        findNeighbours(thiseasData, new Point(thiseasData.erow, thiseasData.ecol)).forEach(eNeighbours::push);
-        stack.push(eNeighbours);
-
-        firstWhile:
         while (!stack.isEmpty()) {
-            StringStack<Point> currentStack = stack.peek();
+            Point current = stack.peek();
 
-            while (!currentStack.isEmpty()) {
-                Point currentPoint = currentStack.peek();
+            if (isPointSolution(thiseasData, current))
+                return Optional.of(current);
 
-                if (isPointSolution(thiseasData, currentPoint)) {
-                    return Optional.of(currentPoint);
-                }
-
-                // push neighbours of currentPoint to stack
-                StringStack<Point> newStack = new StringStackImpl<>();
-                findNeighbours(thiseasData, currentPoint).forEach(newStack::push);
-                stack.push(newStack);
-                continue firstWhile;
-
-                // currentStack.pop();
+            Optional<Point> newPoint = findNeighbour(thiseasData, current);
+            if (newPoint.isPresent()) {
+                stack.push(newPoint.get());
+                continue;
             }
 
+            if (current.x != thiseasData.erow && current.y != thiseasData.ecol)
+                thiseasData.labyrinth.get(current.x)[current.y] = "2";
             stack.pop();
         }
 
