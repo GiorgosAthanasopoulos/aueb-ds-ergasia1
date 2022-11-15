@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="meros b 1/2">
-      <change afterPath="$PROJECT_DIR$/thiseas1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thiseas2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thiseas3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiseas2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thiseas2.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +45,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last.edited.regexp": "123a1414",
-    "last_opened_file_path": "/home/george/Documents/aueb/data-structures/aueb-ds-ergasia1",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last.edited.regexp&quot;: &quot;123a1414&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/george/Documents/aueb/data-structures/aueb-ds-ergasia1&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -67,7 +67,7 @@
     <configuration name="Thiseas" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Thiseas" />
       <module name="ergasia1" />
-      <option name="PROGRAM_PARAMETERS" value="thiseas.txt" />
+      <option name="PROGRAM_PARAMETERS" value="thiseas3.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,7 +99,8 @@
       <workItem from="1668450993066" duration="172000" />
       <workItem from="1668451192029" duration="877000" />
       <workItem from="1668452097369" duration="173000" />
-      <workItem from="1668463483575" duration="5206000" />
+      <workItem from="1668463483575" duration="5228000" />
+      <workItem from="1668511974300" duration="7693000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>

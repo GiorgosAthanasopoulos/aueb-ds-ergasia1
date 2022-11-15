@@ -107,6 +107,10 @@ public class Thiseas {
                 case 1 -> {
                     thiseasData.erow = Integer.parseInt(lineInput[0]);
                     thiseasData.ecol = Integer.parseInt(lineInput[1]);
+                    if (thiseasData.erow < 0 || thiseasData.ecol < 0 || thiseasData.erow >= thiseasData.rows || thiseasData.ecol >= thiseasData.cols) {
+                        System.out.println("Input file format is invalid: e is placed outside labyrinth!");
+                        return Optional.empty();
+                    }
                 }
                 default -> {
                     // check whether we have our 2 info lines
@@ -164,36 +168,60 @@ public class Thiseas {
 
     }
 
-    static Optional<Point> findNeighbour(ThiseasData thiseasData, Point point) {
+    static ArrayList<Point> findNeighbours(ThiseasData thiseasData, Point point) {
+        ArrayList<Point> res = new ArrayList<>();
+
         for (int i = point.x - 1; i <= point.x + 1; i++)
             for (int j = point.y - 1; j <= point.y + 1; j++)
-                if (i >= 0 && j >= 0 && !(i == point.x && j == point.y) && (thiseasData.labyrinth.get(i)[j].equals("0")) && !(i + j == point.x + point.y))
-                    return Optional.of(new Point(i, j));
-        return Optional.empty();
+                // point must:
+                // 1. be inside the labyrinth,
+                // 2. not be the same with the one in the argument list (point),
+                // 3. equal 0,
+                // 4. not be in one of the given point's diagonals,
+                if (i >= 0 && j >= 0 && i < thiseasData.rows && j < thiseasData.cols && !(i == point.x && j == point.y) && (thiseasData.labyrinth.get(i)[j].equals("0")) && !((i == point.x - 1 && j == point.y - 1) || (i == point.x - 1 && j == point.y + 1) || (i == point.x + 1 && j == point.y - 1) || (i == point.x + 1 && j == point.y + 1)))
+                    res.add(new Point(i, j));
+
+        return res;
     }
 
     static boolean isPointSolution(ThiseasData thiseasData, Point point) {
-        return (point.x == 0 || point.y == thiseasData.rows - 1 || point.y == 0 || point.y == thiseasData.cols - 1) && thiseasData.labyrinth.get(point.x)[point.y].equals("O");
+        // if point is:
+        // 1. on the border,
+        // 2. equal to 0,
+        // then we found the solution
+        return (point.x == 0 || point.x == thiseasData.rows - 1 || point.y == 0 || point.y == thiseasData.cols - 1) && thiseasData.labyrinth.get(point.x)[point.y].equals("0");
     }
 
     static Optional<Point> findSolution(ThiseasData thiseasData) {
-        StringStack<Point> stack = new StringStackImpl<>();
-        stack.push(new Point(thiseasData.erow, thiseasData.ecol));
+        StringStack<StringStack<Point>> stack = new StringStackImpl<>();
 
+        StringStack<Point> eStack = new StringStackImpl<>();
+        eStack.push(new Point(thiseasData.erow, thiseasData.ecol));
+        stack.push(eStack);
+
+        stackLoop:
         while (!stack.isEmpty()) {
-            Point current = stack.peek();
+            StringStack<Point> currentStack = stack.peek();
 
-            if (isPointSolution(thiseasData, current))
-                return Optional.of(current);
+            while (!currentStack.isEmpty()) {
+                Point currentPoint = currentStack.peek();
+                System.out.println(currentPoint);
 
-            Optional<Point> newPoint = findNeighbour(thiseasData, current);
-            if (newPoint.isPresent()) {
-                stack.push(newPoint.get());
-                continue;
+                if (isPointSolution(thiseasData, currentPoint))
+                    return Optional.of(currentPoint);
+
+                thiseasData.labyrinth.get(currentPoint.x)[currentPoint.y] = "2";
+
+                StringStack<Point> newStack = new StringStackImpl<>();
+                findNeighbours(thiseasData, currentPoint).forEach(newStack::push);
+                if (!newStack.isEmpty()) {
+                    stack.push(newStack);
+                    continue stackLoop;
+                }
+
+                currentStack.pop();
             }
 
-            if (current.x != thiseasData.erow && current.y != thiseasData.ecol)
-                thiseasData.labyrinth.get(current.x)[current.y] = "2";
             stack.pop();
         }
 
@@ -209,6 +237,6 @@ public class Thiseas {
         if (thiseasDataOptional.isEmpty()) System.exit(1);
 
         Optional<Point> solution = findSolution(thiseasDataOptional.get());
-        System.out.println(solution.isEmpty() ? "Solution for the current labyrinth could not be found!" : solution);
+        System.out.println(solution.isEmpty() ? "Solution for the current labyrinth could not be found!" : "Solution: " + solution);
     }
 }
