@@ -1,7 +1,6 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-@SuppressWarnings("unused")
 public class StringQueueImpl<T> implements StringQueue<T> {
     private final SinglyLinkedList<T> singlyLinkedList;
 

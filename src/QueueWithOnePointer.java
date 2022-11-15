@@ -1,7 +1,6 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-@SuppressWarnings("unused")
 public class QueueWithOnePointer<T> implements StringQueue<T> {
 
     static class CircularSinglyLinkedList<T> {
@@ -12,22 +11,26 @@ public class QueueWithOnePointer<T> implements StringQueue<T> {
         public void add(T val) {
             Node<T> node = new Node<>(val);
 
-            if (size == 0) tail.next = node;
+            if (size == 0)
+                tail.next = node;
             tail = node;
             size++;
         }
 
         public Node<T> remove() throws NoSuchElementException {
-            if (size == 0) throw new NoSuchElementException();
+            if (size == 0)
+                throw new NoSuchElementException();
 
             Node<T> oldHead = tail.next;
             tail.next = tail.next.next;
-            if (--size == 0) tail = null;
+            if (--size == 0)
+                tail = null;
             return oldHead;
         }
 
         public Node<T> peek() throws NoSuchElementException {
-            if (size == 0) throw new NoSuchElementException();
+            if (size == 0)
+                throw new NoSuchElementException();
 
             return tail;
         }

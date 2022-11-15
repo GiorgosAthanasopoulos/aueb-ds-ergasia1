@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="meros b 1/2">
-      <change afterPath="$PROJECT_DIR$/src/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiseas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiseas1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiseas2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiseas3.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="v1.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +85,7 @@
       <workItem from="1668451192029" duration="877000" />
       <workItem from="1668452097369" duration="173000" />
       <workItem from="1668463483575" duration="5228000" />
-      <workItem from="1668511974300" duration="9470000" />
+      <workItem from="1668511974300" duration="9559000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>
@@ -109,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668365788031</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v1.1">
+      <created>1668525138994</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668525138994</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +131,8 @@
     <MESSAGE value="merge" />
     <MESSAGE value="meros a &amp; c done" />
     <MESSAGE value="meros b 1/2" />
-    <option name="LAST_COMMIT_MESSAGE" value="meros b 1/2" />
+    <MESSAGE value="v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
