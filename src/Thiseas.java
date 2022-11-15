@@ -92,6 +92,8 @@ public class Thiseas {
                         return Optional.empty();
                     }
                 } else {
+                    // From line 3 and down we allow users to write comments/descriptions for their labyrinths by using the ! symbol at the start of the line
+                    if (lineInput[0].startsWith("!")) break;
                     if (!labyrinthLineRegex.matcher(s).find()) {
                         System.out.println("Input file format is invalid: labyrinth line " + (lineCounter + 1 - 2) + " contains invalid literal: " + s);
                         return Optional.empty();
@@ -113,6 +115,7 @@ public class Thiseas {
                     }
                 }
                 default -> {
+                    if (lineInput[0].startsWith("!")) continue;
                     // check whether we have our 2 info lines
                     if (infoLineCounter < 2) {
                         System.out.println("Input file format is invalid: info line 1 or 2 is missing!");
@@ -205,10 +208,8 @@ public class Thiseas {
 
             while (!currentStack.isEmpty()) {
                 Point currentPoint = currentStack.peek();
-                System.out.println(currentPoint);
 
-                if (isPointSolution(thiseasData, currentPoint))
-                    return Optional.of(currentPoint);
+                if (isPointSolution(thiseasData, currentPoint)) return Optional.of(currentPoint);
 
                 thiseasData.labyrinth.get(currentPoint.x)[currentPoint.y] = "2";
 

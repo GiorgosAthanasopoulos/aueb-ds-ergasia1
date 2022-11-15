@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="meros b 1/2">
-      <change afterPath="$PROJECT_DIR$/thiseas3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thiseas2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thiseas2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiseas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiseas1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiseas2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thiseas3.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +66,6 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Thiseas" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Thiseas" />
-      <module name="ergasia1" />
-      <option name="PROGRAM_PARAMETERS" value="thiseas3.txt" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -100,7 +93,7 @@
       <workItem from="1668451192029" duration="877000" />
       <workItem from="1668452097369" duration="173000" />
       <workItem from="1668463483575" duration="5228000" />
-      <workItem from="1668511974300" duration="7693000" />
+      <workItem from="1668511974300" duration="9470000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>
