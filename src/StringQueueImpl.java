@@ -25,7 +25,7 @@ public class StringQueueImpl<T> implements StringQueue<T> {
 
     @Override
     public T peek() throws NoSuchElementException {
-        return singlyLinkedList.queuePeek().val;
+        return singlyLinkedList.peek().val;
     }
 
     @Override

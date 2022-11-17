@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="v1.1" />
+    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="queue with one pointer fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QueueWithOnePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +89,9 @@
       <workItem from="1668452097369" duration="173000" />
       <workItem from="1668463483575" duration="5228000" />
       <workItem from="1668511974300" duration="9559000" />
+      <workItem from="1668554739011" duration="3000" />
+      <workItem from="1668689440238" duration="3994000" />
+      <workItem from="1668693530354" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>
@@ -108,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668525138994</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="queue with one pointer fix">
+      <created>1668693446154</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668693446154</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +145,8 @@
     <MESSAGE value="meros a &amp; c done" />
     <MESSAGE value="meros b 1/2" />
     <MESSAGE value="v1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
+    <MESSAGE value="queue with one pointer fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="queue with one pointer fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -41,16 +41,10 @@ public class SinglyLinkedList<T> {
         return oldHead;
     }
 
-    public Node<T> stackPeek() throws NoSuchElementException {
+    public Node<T> peek() throws NoSuchElementException {
         if (size == 0) throw new NoSuchElementException();
 
         return head;
-    }
-
-    public Node<T> queuePeek() throws NoSuchElementException {
-        if (size == 0) throw new NoSuchElementException();
-
-        return tail;
     }
 
     public int size() {
@@ -64,14 +58,16 @@ public class SinglyLinkedList<T> {
     @Override
     public String toString() {
         StringBuilder buffer = new StringBuilder();
+        buffer.append(getClass().getName());
+        buffer.append("@");
+        buffer.append(Integer.toHexString(hashCode()));
+        buffer.append(": ");
 
         Node<T> headCopy = head;
 
         while (headCopy != null) {
             buffer.append(headCopy.val);
-            if (headCopy.next != null) {
-                buffer.append(", ");
-            }
+            if (headCopy.next != null) buffer.append(", ");
 
             headCopy = headCopy.next;
         }

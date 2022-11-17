@@ -25,7 +25,7 @@ public class StringStackImpl<T> implements StringStack<T> {
 
     @Override
     public T peek() throws NoSuchElementException {
-        return singlyLinkedList.stackPeek().val;
+        return singlyLinkedList.peek().val;
     }
 
     @Override
