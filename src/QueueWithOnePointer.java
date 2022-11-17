@@ -11,28 +11,37 @@ public class QueueWithOnePointer<T> implements StringQueue<T> {
         public void add(T val) {
             Node<T> node = new Node<>(val);
 
-            if (size == 0)
+            if (size == 0) {
+                tail = node;
                 tail.next = node;
-            tail = node;
+            } else {
+                node.next = tail.next;
+                tail.next = node;
+                tail = node;
+            }
+
             size++;
         }
 
         public Node<T> remove() throws NoSuchElementException {
-            if (size == 0)
-                throw new NoSuchElementException();
+            if (size == 0) throw new NoSuchElementException();
 
             Node<T> oldHead = tail.next;
-            tail.next = tail.next.next;
-            if (--size == 0)
+
+            if (size == 1) {
+                tail.next = null;
                 tail = null;
+            } else {
+                tail.next = tail.next.next;
+            }
+
             return oldHead;
         }
 
         public Node<T> peek() throws NoSuchElementException {
-            if (size == 0)
-                throw new NoSuchElementException();
+            if (size == 0) throw new NoSuchElementException();
 
-            return tail;
+            return tail.next;
         }
 
         public int size() {
@@ -46,11 +55,24 @@ public class QueueWithOnePointer<T> implements StringQueue<T> {
         @Override
         public String toString() {
             StringBuilder buffer = new StringBuilder();
-            Node<T> head = tail.next;
+            buffer.append(getClass().getName());
+            buffer.append("@");
+            buffer.append(Integer.toHexString(hashCode()));
+            buffer.append(": ");
 
-            while (head != tail) {
-                buffer.append(head.val).append(", ");
-                head = head.next;
+            if (size == 0) return buffer.toString();
+
+            Node<T> head = tail.next;
+            Node<T> headCopy = tail.next;
+
+            if (size == 1) return buffer.append(headCopy.val).toString();
+
+            buffer.append(headCopy.val).append(", ");
+            headCopy = headCopy.next;
+
+            while (headCopy != head) {
+                buffer.append(headCopy.val).append(", ");
+                headCopy = headCopy.next;
             }
 
             return buffer.toString();

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="v1.1" />
+    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="v1.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QueueWithOnePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringQueueImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringStackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringStackImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +92,8 @@
       <workItem from="1668452097369" duration="173000" />
       <workItem from="1668463483575" duration="5228000" />
       <workItem from="1668511974300" duration="9559000" />
+      <workItem from="1668554739011" duration="3000" />
+      <workItem from="1668689440238" duration="3971000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>
