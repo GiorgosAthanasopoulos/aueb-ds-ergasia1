@@ -115,4 +115,9 @@ public class QueueWithOnePointer<T> implements StringQueue<T> {
     public int size() {
         return circularSinglyLinkedList.size();
     }
+
+    @Override
+    public String toString() {
+        return circularSinglyLinkedList.toString();
+    }
 }

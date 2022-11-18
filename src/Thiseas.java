@@ -256,8 +256,10 @@ public class Thiseas {
     }
 
     public static void main(String[] args) throws IOException {
-        if (args.length == 0)
+        if (args.length == 0) {
             System.out.println("Argument missing: filename!");
+            System.exit(1);
+        }
 
         String filename = args[0];
 

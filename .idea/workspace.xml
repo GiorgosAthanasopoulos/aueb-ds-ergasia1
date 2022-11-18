@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="queue with one pointer fix">
+      <change afterPath="$PROJECT_DIR$/thiseas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/QueueWithOnePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +63,16 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Thiseas" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Thiseas" />
+      <module name="ergasia1" />
+      <option name="PROGRAM_PARAMETERS" value="thiseas.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -91,7 +103,8 @@
       <workItem from="1668511974300" duration="9559000" />
       <workItem from="1668554739011" duration="3000" />
       <workItem from="1668689440238" duration="3994000" />
-      <workItem from="1668693530354" duration="16000" />
+      <workItem from="1668693530354" duration="98000" />
+      <workItem from="1668792924505" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>
@@ -121,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668693446154</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="queue with one pointer fix">
+      <created>1668693552687</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668693552687</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
