@@ -1,0 +1,106 @@
+t<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Project 1 Report - Data Structures Course</title>
+    <meta
+      name="description"
+      content="Project 1 report for data structures course @ aueb.gr (3rd semester)"
+    />
+    <meta name="author" content="Anastasia Andromida, Giorgos Athanasopoulos" />
+    <meta
+      name="keywords"
+      content="project, java, data, data structures, alogrithms, semester, university, exams"
+    />
+
+    <style>
+      body {
+        background-color: #1a1a1d;
+        color: #c3073f;
+        font-family: "Tahoma";
+        margin-right: 15vw;
+        margin-left: 15vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      #report {
+        list-style: none;
+      }
+      #report p {
+        color: white;
+      }
+
+      h1 {
+        text-decoration: underline;
+      }
+
+      .slideshow {
+        list-style: none;
+      }
+
+      img {
+        width: 640px;
+        height: 480px;
+        user-select: none;
+      }
+
+      #authors {
+        margin-top: 5px;
+      } 
+    </style>
+  </head>
+  <body>
+    <h1>Εργασία 1 - Δομές Δεδομένων</h1>
+    <ul id="report">
+      <li>
+        <h2>Μέρος Α</h2>
+        <p>
+          Η υλοποίηση και των 2 διεπαφών βασίζεται στην, από εμάς κατασκευασμένη, κλάση μονά συνδεδεμένης λίστας.Συγκεριμένα η κλάση περιέχει τις 4 βασικές λειτουργίες της στοίβας και της ουράς: εισαγωγή στοιχείου στην αρχή, εισαγωγή στοιχείου στο τέλος, διαγραφή στοιχείου από την αρχή και διαγραφή στοιχείου από το τέλος.
+        </p>
+        <ul class="slideshow">
+          <li><img src="assets/push.png" alt="push"></li>
+          <li><img src="assets/put.png" alt="put"></li>
+          <li><img src="assets/pop.png" alt="pop"></li>
+          <li><img src="assets/get.png" alt="get"></li>
+        </ul>
+          <p>Με τη χρήση 2 μεταβλητών-δεικτών στο "κεφάλι" και την "ουρά" της λίστας επιτυγχάνουμε time complexity O(1) σε όλες τις λειτουργίες.</p>
+      </li>
+      <li>
+        <h2>Μέρος Β</h2>
+        <p>
+              Το σκεπτικό πίσω από την επίλυση του προβλήματος Β ήταν να
+              χρησιμοποιήσουμε τη στοίβα του μέρους Α έτσι ώστε κατά τη διάρκεια
+              εύρεσης της λύσης, αν τυχόν φτάσουμε σε αδιέξοδο να κάνουμε
+              backtrack(pop)σε προηγούμενο σημείο από το οποίο μπορούμε να
+              προχωρήσουμε σε διαφορετικό μονοπάτι.
+        </p>
+          <ul class="slideshow">
+            <li><img src="assets/backtrack1.png" alt="backtrack1"></li>
+            <li><img src="assets/backtrack2.png" alt="backtrack2"></li>
+          </ul>
+      </li>
+      <li>
+        <h2>Μέρος Γ</h2>
+        <p>
+          <p>Η υλοποίηση της κυκλικής, μονά συνδεδεμένης λίστας για την ουρά του ερωτήματος Γ είναι παρόμοια με το μέρος Α(αντικαθιστούμε το head με το tail.next):</p>
+          <ul class="slideshow">
+            <li><img src="assets/put2.png" alt="put2"></li>
+            <li><img src="assets/get2.png" alt="get2"></li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+    <ul id="authors">
+      <li>Αναστασία Ανδρομιδά # 3210008</li>
+      <li>Γιώργος Αθανασόπουλος # 3210265</li>
+    </ul>
+  </body>
+</html>

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="queue with one pointer fix">
-      <change afterPath="$PROJECT_DIR$/thiseas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QueueWithOnePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QueueWithOnePointer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thiseas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thiseas.java" afterDir="false" />
-    </list>
+    <list default="true" id="afd42a3d-1a64-4eaa-a88e-e70c57d5ee83" name="Changes" comment="final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +99,7 @@
       <workItem from="1668554739011" duration="3000" />
       <workItem from="1668689440238" duration="3994000" />
       <workItem from="1668693530354" duration="98000" />
-      <workItem from="1668792924505" duration="1074000" />
+      <workItem from="1668792924505" duration="1234000" />
     </task>
     <task id="LOCAL-00001" summary="meros a &amp; c done">
       <created>1668178511026</created>
@@ -141,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668693552687</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="final">
+      <created>1668794024201</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668794024201</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +168,8 @@
     <MESSAGE value="meros b 1/2" />
     <MESSAGE value="v1.1" />
     <MESSAGE value="queue with one pointer fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="queue with one pointer fix" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
